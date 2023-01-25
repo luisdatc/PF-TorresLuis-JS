@@ -1,0 +1,123 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding-top: 5.5rem;
+}
+
+/* MAIN SECTION */
+.main {
+  &-contenedor {
+    background-color: $amarillo;
+    padding: 1rem;
+  }
+  &-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* US SECTION */
+.UsSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "item1 item3 item6"
+  "item1 item4 item6"
+  "item2 item5 item7";
+  background-color: $fucsia;
+}
+
+.UsSection-item1 {
+  grid-area: item1;
+}
+.UsSection-item2 {
+  grid-area: item2;
+}
+.section-item3 {
+  grid-area: item3;
+}
+.UsSection-item4 {
+  grid-area: item4;
+/*   background-image: url(../images/people-posing-together-on-registration-day.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  
+}
+.UsSection-item5 {
+  grid-area: item5;
+}
+.UsSection-item6 {
+  grid-area: item6;
+}
+.UsSection-item7 {
+  grid-area: item7;
+}
+
+/* CURSOS SECTION */
+.CursosSection{
+  background-color: $azulroyal;
+  padding: 1rem;
+}
+
+/* SECTION INFORMACION CARDS CAROUSEL */
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* @media (min-width: 768px) {
+  .card img {
+    height: 11em;
+  }
+} */
+
+/* CATALOGO SECTION */
+.CatalogoSection{
+  padding: 1rem;
+  background-color: $naranjaclaro;
+}
+
+
+.CatalogoSection-column1{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+
+}
+
+/* REVIEX SECTION */
+.ReviewSection{
+  background-color: $naranja;
+  padding: 1rem;
+
+}
+

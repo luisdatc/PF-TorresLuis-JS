@@ -1,0 +1,15 @@
+{
+  "name": "proyectofinal-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "Luis Torres",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1"
+  }
+}

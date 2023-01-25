@@ -1,0 +1,21 @@
+/* CUSTOM NAVBAR */
+$navbar-light-brand-color: $azulroyal;
+$navbar-light-brand-hover-color: $fucsia;
+
+
+/* DROPDOWN NAVBAR */
+$dropdown-link-color: $fucsia;
+$dropdown-link-hover-color: $azulroyal;
+/* $dropdown-border-color: none;
+$dropdown-bg: transparent;
+$dropdown-link-hover-bg: transparent; */
+$dropdown-padding-y: 0;
+$dropdown-item-padding-y: 0.1rem;
+
+
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

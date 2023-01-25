@@ -1,0 +1,16 @@
+.navbar {
+  background-color: white;
+  .navbar-brand {
+    font-weight: 700;
+  }
+}
+
+.nav-item {
+  .nav-link {
+    color: $naranja;
+    font-weight: 500;
+    &:hover {
+      color: $fucsia;
+    }
+  }
+}
