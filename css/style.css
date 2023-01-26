@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* colores */
 /* $azulroyal:#362676;
 $celeste:#0071f1;
@@ -3332,8 +3339,8 @@ textarea.form-control-lg {
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
   --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15);
-  --bs-dropdown-link-color: #FC05E7;
-  --bs-dropdown-link-hover-color: #3626E9;
+  --bs-dropdown-link-color: #fc05e7;
+  --bs-dropdown-link-hover-color: #3626e9;
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #0d6efd;
@@ -3848,8 +3855,8 @@ textarea.form-control-lg {
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: #3626E9;
-  --bs-navbar-brand-hover-color: #FC05E7;
+  --bs-navbar-brand-color: #3626e9;
+  --bs-navbar-brand-hover-color: #fc05e7;
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
@@ -11638,18 +11645,11 @@ textarea.form-control-lg {
 }
 
 .nav-item .nav-link {
-  color: #FF6C3B;
+  color: #ff6c3b;
   font-weight: 500;
 }
 .nav-item .nav-link:hover {
-  color: #FC05E7;
-}
-
-/* RESET CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  color: #fc05e7;
 }
 
 body {
@@ -11658,7 +11658,7 @@ body {
 
 /* MAIN SECTION */
 .main-contenedor {
-  background-color: #CFFF2E;
+  background-color: #cfff2e;
   padding: 1rem;
 }
 .main-img {
@@ -11667,12 +11667,21 @@ body {
 }
 
 /* US SECTION */
+/* CURSOS SECTION */
+.CursosSection {
+  background-color: #3626e9;
+  padding: 1rem;
+}
+
+/* CATALOGO SECTION */
+/* REVIEX SECTION */
+/* REDES SOCIALES */
 .UsSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "item1 item3 item6" "item1 item4 item6" "item2 item5 item7";
-  background-color: #FC05E7;
+  background-color: #fc05e7;
 }
 
 .UsSection-item1 {
@@ -11707,13 +11716,11 @@ body {
   grid-area: item7;
 }
 
-/* CURSOS SECTION */
 .CursosSection {
-  background-color: #3626E9;
+  background-color: #3626e9;
   padding: 1rem;
 }
 
-/* SECTION INFORMACION CARDS CAROUSEL */
 .cards-wrapper {
   display: flex;
   justify-content: center;
@@ -11745,29 +11752,40 @@ body {
   transform: translateY(-50%);
 }
 
-/* @media (min-width: 768px) {
-  .card img {
-    height: 11em;
-  }
-} */
-/* CATALOGO SECTION */
-.CatalogoSection {
+.catalogoSection {
   padding: 1rem;
-  background-color: #E8B12A;
+  background-color: #e8b12a;
 }
 
-.CatalogoSection-column1 {
+.catalogoSection-column1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* REVIEX SECTION */
-.ReviewSection {
-  background-color: #FF6C3B;
-  padding: 1rem;
+.reviewSection {
+  background-color: #ff6c3b;
 }
-
-/* REDES SOCIALES */
+.reviewSection-card {
+  padding: 1rem 1.5rem;
+}
+.reviewSection-card-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.reviewSection-card-name h5, .reviewSection-card-name .h5 {
+  padding: 0 2rem;
+}
+.reviewSection-card-img {
+  border-radius: 50%;
+}
+.reviewSection-card-review {
+  padding: 1rem 0;
+}
+.reviewSection-card-review blockquote {
+  text-align: justify;
+}
 
 /*# sourceMappingURL=style.css.map */

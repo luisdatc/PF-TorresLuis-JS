@@ -1,0 +1,38 @@
+.UsSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "item1 item3 item6"
+    "item1 item4 item6"
+    "item2 item5 item7";
+    background-color: $fucsia;
+  }
+  
+  .UsSection-item1 {
+    grid-area: item1;
+  }
+  .UsSection-item2 {
+    grid-area: item2;
+  }
+  .section-item3 {
+    grid-area: item3;
+  }
+  .UsSection-item4 {
+    grid-area: item4;
+  /*   background-image: url(../images/people-posing-together-on-registration-day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    
+  }
+  .UsSection-item5 {
+    grid-area: item5;
+  }
+  .UsSection-item6 {
+    grid-area: item6;
+  }
+  .UsSection-item7 {
+    grid-area: item7;
+  }
+  
