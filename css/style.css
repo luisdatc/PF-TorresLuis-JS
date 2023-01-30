@@ -11653,7 +11653,7 @@ textarea.form-control-lg {
 }
 
 body {
-  padding-top: 5.5rem;
+  padding-top: 3rem;
 }
 
 /* MAIN SECTION */
@@ -11666,16 +11666,6 @@ body {
   margin: 0 auto;
 }
 
-/* US SECTION */
-/* CURSOS SECTION */
-.CursosSection {
-  background-color: #3626e9;
-  padding: 1rem;
-}
-
-/* CATALOGO SECTION */
-/* REVIEX SECTION */
-/* REDES SOCIALES */
 .UsSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -11763,6 +11753,40 @@ body {
   justify-content: center;
 }
 
+.catalogoSection-card {
+  margin: 0.5rem;
+}
+
+.active {
+  background-color: #3626e9;
+}
+
+@media (min-width: 376px) and (max-width: 992px) {
+  .catalogoSection-column1 {
+    display: flex;
+    flex-direction: row;
+  }
+  #btnProgramacion,
+  #btnData,
+  #btnDiseño {
+    width: 33.33%;
+    border-radius: 5px;
+    margin: 1rem;
+  }
+  .btn-group-vertical {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #menorMayor,
+  #mayorMenor,
+  #alfabetico {
+    width: 33.33%;
+    border-radius: 5px;
+    margin: 1rem;
+  }
+}
 .reviewSection {
   background-color: #ff6c3b;
 }

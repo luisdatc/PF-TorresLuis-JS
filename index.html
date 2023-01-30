@@ -91,15 +91,57 @@
                   <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
               </ul>
-              <span class="navbar-text">
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-              </span>
+
+              <div class="navbar-text">
+                <!-- <a href=""></i></a> -->
+                <button
+                  type="button"
+                  class="btn btn-outline-warning"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="fa-solid fa-cart-shopping" id="carrito"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <main class="main" id="home">
       <div class="main-contenedor container-fluid">
         <div class="row">
@@ -137,6 +179,10 @@
 
     <section class="CursosSection" id="destacados">
       <div id="carouselExampleIndicators" class="carousel slide">
+        <h3>
+          Esta es la seccion donde encontraras nuestros cursos mas destacados y
+          mas seleccionados por nuestra clientela
+        </h3>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="cards-wrapper">
@@ -168,7 +214,11 @@
     <section class="catalogoSection" id="catalogo">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-2 col-xl-2 col-md- col-sm- col-xs-">
+          <div class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 order-sm-1 order-md-1 order-lg-1 order-xl-1" >
+            <p>
+              Selecciona una opcion de la categoria de cursos que quieres
+              visualizar
+            </p>
             <div class="catalogoSection-column1">
               <button
                 class="catalogoSection-column1-programacion"
@@ -179,117 +229,23 @@
               <button class="catalogoSection-column1-diseño" id="btnDiseño">
                 Diseño
               </button>
-              <button class="catalogoSection-column1-producto" id="btnProducto">
-                Producto
+              <button class="catalogoSection-column1-producto" id="btnData">
+                Data
               </button>
             </div>
           </div>
-          <div class="col-lg-8 col-xl-8 col-md- col-sm- col-xs-">
-            <div class="row justify-content-between">
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="card catalogoSection-card">
-                  <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="card catalogoSection-card">
-                  <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                  <div class="card-body catalogoSection-body">
-                    <h5 class="card-title catalogoSection-tittle">
-                      Card title
-                    </h5>
-                    <p class="card-text catalogoSection-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="card catalogoSection-card">
-                  <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                  <div class="card-body catalogoSection-body">
-                    <h5 class="card-title catalogoSection-tittle">
-                      Card title
-                    </h5>
-                    <p class="card-text catalogoSection-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row justify-content-between">
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="card catalogoSection-card">
-                  <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                  <div class="card-body catalogoSection-body">
-                    <h5 class="card-title catalogoSection-tittle">
-                      Card title
-                    </h5>
-                    <p class="card-text catalogoSection-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="card catalogoSection-card">
-                  <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                  <div class="card-body catalogoSection-body">
-                    <h5 class="card-title catalogoSection-tittle">
-                      Card title
-                    </h5>
-                    <p class="card-text catalogoSection-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="card catalogoSection-card">
-                  <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                  <div class="card-body catalogoSection-body">
-                    <h5 class="card-title catalogoSection-tittle">
-                      Card title
-                    </h5>
-                    <p class="card-text catalogoSection-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p>
-              Selecciona una opcion de la categoria de cursos que quieres
-              visualizar
-            </p>
+          <div class="col-lg-8 col-xl-8 col-md-12 col-sm-12 col-xs-12 order-sm-3 order-md-3 order-lg-2 order-xl-2">
+            <div class="row" id="rowcategoria"></div>
+            <h3 id="encontrado"></h3>
           </div>
-          <div class="col-lg-2 col-xl-2 col-md- col-sm- col-xs-">
+          <div class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 order-sm-2 order-md-2 order-lg-3 order-xl-3">
             <div class="text-center catalogoSection-column3">
               <div class="input-group">
                 <input
                   type="text"
                   class="form-control catalogoSection-column3-input"
                   id="searchInput"
-                  placeholder="Input group example"
+                  placeholder="Nombre de curso/Buscar o categoria"
                   aria-label="Input group example"
                   aria-describedby="btnGroupAddon"
                 />
@@ -301,13 +257,31 @@
                     class="catalogoSection-column3-searchinput-btn"
                     id="btnSearch"
                   >
-                    <img src="images/lupa.svg" alt="" />
+                     <img src="images/lupa.svg" alt="" /> 
                   </button>
                 </div>
               </div>
-              <button type="button" class="btn btn-success">
-                Mostrar Todo
-              </button>
+              <div class="row">
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-xs-6">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    id="btnMostrarTodo"
+                  >
+                    Mostrar Todo
+                  </button>
+                </div>
+
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-xs-6">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    id="btnOcultarTodo"
+                  >
+                    Ocultar Todo
+                  </button>
+                </div>
+              </div>
 
               <h4 class="catalogoSection-column3-tittle">Ordenar</h4>
               <div
@@ -315,13 +289,13 @@
                 role="group"
                 aria-label="Vertical button group"
               >
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" id="menorMayor">
                   Menor a Mayor: Precio
                 </button>
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" id="mayorMenor">
                   Mayor a Menor: Precio
                 </button>
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" id="alfabetico">
                   Alfabeticamente
                 </button>
               </div>
@@ -535,13 +509,13 @@
     </footer>
 
     <!--JAVASCRIPT FILES-->
-    <!-- <script
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
-    ></script> -->
-    <!-- <script src="js/bootstrap.js"></script> -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    ></script>
+    <!-- <script src="js/bootstrap.js"></script> 
+    <script src="js/bootstrap.bundle.min.js"></script>-->
     <script src="js/clases.js"></script>
     <script src="js/main.js"></script>
   </body>
