@@ -67,7 +67,7 @@ function mostrarProductos(todos) {
       <p class="card-text"> El curso tiene un Precio de: $${curso.precioCurso} pesos argentinos.
     </p>
     <p class="card-text">
-    El curso tiene una fecha estima de inicio: ${curso.inicioCursada}
+    El curso tiene una fecha estima de inicio de: ${curso.inicioCursada}
     </p>
     <a href="#" class="btn btn-primary" id="btnAgregar${curso.idCurso}">Agregar al Carrito</a>
     </div>
