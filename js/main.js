@@ -197,21 +197,21 @@ botones.forEach((boton) => {
 
 //evento input de busqueda
 busqueda.addEventListener("input", () => {
-  buscarInfo(busqueda.value, cursosCatalogo);
+  buscarInfo(busqueda.value.toLowerCase(), cursosCatalogo);
 });
 
 //evento menor a mayor
-btnMenorMayor.addEventListener("click", ()=>{
-  cursoMenorMayor(cursosCatalogo)
-})
+btnMenorMayor.addEventListener("click", () => {
+  cursoMenorMayor(cursosCatalogo);
+});
 //evento mayor a menor
-btnMayorMenor.addEventListener("click", ()=>{
-  cursoMayorMenor(cursosCatalogo)
-})
+btnMayorMenor.addEventListener("click", () => {
+  cursoMayorMenor(cursosCatalogo);
+});
 //evento alfabeticamente
-btnAlfabetico.addEventListener("click", ()=>{
-  cursoAlfabeticoNombre(cursosCatalogo)
-})
+btnAlfabetico.addEventListener("click", () => {
+  cursoAlfabeticoNombre(cursosCatalogo);
+});
 
 /* //filtrado de array para boton categoria programacion
 btnProgramacion.addEventListener("click", ()=>{
