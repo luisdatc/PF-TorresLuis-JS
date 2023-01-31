@@ -2,6 +2,20 @@
   background-color: white;
   .navbar-brand {
     font-weight: 700;
+    margin: 0;
+  }
+  &-logo {
+    width: 2rem;
+  }
+  &-button-cart {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    border: none;
+    margin-right: 2rem;
+    color: $fucsia;
+    &:hover{
+      color: $naranja;
+    }
   }
 }
 
@@ -9,33 +23,13 @@
   .nav-link {
     color: $naranja;
     font-weight: 500;
+    font-size: 1.2rem;
     &:hover {
       color: $fucsia;
     }
   }
-}
-
-
-.boton{
-  margin: auto 0;
-}
-
-.btn-outline-warning{
-  border: none;
-  padding: 0;
-}
-
-.btn-outline-warning:hover{
-  background-color: transparent;
-  border: none;
-}
-
-.fa-cart-shopping{
-  font-size: 1.5rem;
-  padding: 1rem 0;
-}
-
-.fa-cart-shopping::before{
-  background-color: transparent;
+  &-boton{
+    margin: auto 0;
+  }
 }
 

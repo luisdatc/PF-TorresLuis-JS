@@ -26,7 +26,11 @@
       <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#home"
-            ><img src="images/favicon.svg" alt="logo Capacitando" />
+            ><img
+              src="images/favicon.svg"
+              alt="logo Capacitando"
+              class="navbar-logo"
+            />
             CAPACITANDO</a
           >
           <button
@@ -56,7 +60,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="offcanvas-body">
+            <div class="offcanvas-body align-items-center">
               <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#home"
@@ -93,31 +97,26 @@
               </ul>
               <div class="">
                 <ul class="navbar-nav">
-                  <li class="nav-item boton">
+                  <li class="nav-item nav-item-boton">
                     <button class="switchDark" id="switch">
                       <span><i class="fa-solid fa-sun"></i></span>
                       <span><i class="fa-solid fa-moon"></i></span>
                     </button>
                   </li>
                   <li class="nav-item boton">
-                    <!--  <a href="" class="" </a> -->
-
                     <button
                       type="button"
-                      class=""
+                      class="btn navbar-button-cart"
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
                     >
-                      <i class="fa-solid fa-cart-shopping" id="carrito"></i>
+                      <i class="fa-solid fa-cart-shopping" id="carrito"
+                        ><span> </span
+                      ></i>
                     </button>
                   </li>
                 </ul>
               </div>
-              <!-- <a href=""></i></a> -->
-              <!-- <button class="switchDark" id="switch">
-                <span><i class="fa-solid fa-sun"></i></span>
-                <span><i class="fa-solid fa-moon"></i></span>
-              </button> -->
             </div>
           </div>
         </div>
@@ -193,10 +192,10 @@
     </section>
 
     <section class="CursosSection" id="destacados">
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <h3>
-          Esta es la seccion donde encontraras nuestros cursos mas destacados y
-          mas seleccionados por nuestra clientela
+<!--       <div id="carouselExampleIndicators" class="carousel slide">
+ -->        <h3 class="CursosSection-tittle">
+          Estos son nuestros cursos mas destacados y
+           seleccionados por nuestra clientela
         </h3>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -223,7 +222,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+      <!-- </div> -->
     </section>
 
     <section class="catalogoSection" id="catalogo">
@@ -232,7 +231,7 @@
           <div
             class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 prueba1 order-sm-1 order-md-1 order-lg-1 order-xl-1"
           >
-            <p>
+            <p class="catalogoSection-text">
               Selecciona una opcion de la categoria de cursos que quieres
               visualizar
             </p>

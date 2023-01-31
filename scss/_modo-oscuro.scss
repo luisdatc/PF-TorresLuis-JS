@@ -15,12 +15,12 @@
   line-height: rem;
   font-size: 1rem;
   display: block;
-  color: #fff;
+  color: $fucsia;
   background: none;
 }
 .switchDark::after {
   display: block;
-  background: #fffbf5;
+  background:$naranja;
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
@@ -31,9 +31,10 @@
   transition: all 0.5s ease;
   box-shadow: 0 0 1.5px 1.5px rgba(0, 0, 0, 0.5);
   content: "";
+
 }
 .switchDark.active {
-  background: green;
+  background: $amarillo;
 }
 .switchDark.active::after {
   left: unset;
