@@ -14,3 +14,28 @@
     }
   }
 }
+
+
+.boton{
+  margin: auto 0;
+}
+
+.btn-outline-warning{
+  border: none;
+  padding: 0;
+}
+
+.btn-outline-warning:hover{
+  background-color: transparent;
+  border: none;
+}
+
+.fa-cart-shopping{
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.fa-cart-shopping::before{
+  background-color: transparent;
+}
+
