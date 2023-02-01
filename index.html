@@ -134,7 +134,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Carrito de Compras
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -149,9 +151,11 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              Cerrar
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">
+              Confirmar Compra
+            </button>
           </div>
         </div>
       </div>
@@ -209,59 +213,65 @@
       <div class="container-fluid">
         <div class="row">
           <div
-            class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 prueba1 order-sm-1 order-md-1 order-lg-1 order-xl-1"
+            class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 catalogoSection-category order-sm-1 order-md-1 order-lg-1 order-xl-1"
           >
-            <p class="catalogoSection-text">
+            <p class="catalogoSection-category-text">
               Selecciona una opcion de la categoria de cursos que quieres
               visualizar
             </p>
-            <div class="catalogoSection-column1">
+            <div class="catalogoSection-category-buttons">
               <button
-                class="catalogoSection-column1-programacion"
+                class="catalogoSection-category-buttons-programacion"
                 id="btnProgramacion"
               >
                 Programacion
               </button>
-              <button class="catalogoSection-column1-diseño" id="btnDiseño">
+              <button
+                class="catalogoSection-category-buttons-diseño"
+                id="btnDiseño"
+              >
                 Diseño
               </button>
-              <button class="catalogoSection-column1-producto" id="btnData">
+              <button
+                class="catalogoSection-category-buttons-data"
+                id="btnData"
+              >
                 Data
               </button>
             </div>
           </div>
           <div
-            class="col-lg-8 col-xl-8 col-md-12 col-sm-12 col-xs-12 prueba2 order-sm-3 order-md-3 order-lg-2 order-xl-2"
+            class="col-lg-8 col-xl-8 col-md-12 col-sm-12 col-xs-12 catalogoSection-cursos order-sm-3 order-md-3 order-lg-2 order-xl-2"
           >
             <div class="row" id="rowcategoria"></div>
             <h3 id="encontrado"></h3>
           </div>
           <div
-            class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 prueba3 order-sm-2 order-md-2 order-lg-3 order-xl-3"
+            class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 catalogoSection-functions order-sm-2 order-md-2 order-lg-3 order-xl-3"
           >
             <div class="text-center catalogoSection-column3">
-              <div class="input-group">
+              <div class="input-group catalogoSection-column3-input">
                 <input
                   type="text"
                   class="form-control catalogoSection-column3-input"
                   id="searchInput"
-                  placeholder="Nombre de curso/Buscar o categoria"
+                  placeholder="Nombre de curso/categoria"
                   aria-label="Input group example"
                   aria-describedby="btnGroupAddon"
                 />
-                <div
+                <!--<div
                   class="input-group-text catalogoSection-column3-searchinput"
                   id="btnGroupAddon"
                 >
-                  <button
+                   <button
                     class="catalogoSection-column3-searchinput-btn"
                     id="btnSearch"
                   >
                     <img src="images/lupa.svg" alt="" />
-                  </button>
-                </div>
+                  </button> 
+                </div>-->
               </div>
-              <div class="row">
+              <div class="row catalogoSection-column3-buttons">
                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
                   <button
                     type="button"
@@ -408,13 +418,15 @@
       </div>
     </section>
 
-    <footer class="FooterSection" id="contacto">
+    <footer class="footerSection" id="contacto">
       <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-xl-4 col-lg4 col-md-12 col-sm-12 col-xs-12">
-            <h3 class="text-center">Formulario de Consultas</h3>
+        <div class="row">
+          <div
+            class="col-xl-4 col-lg4 col-md-12 col-sm-12 col-xs-12 footerSection-form"
+          >
+            <h5 class="text-center">Formulario de Consultas</h5>
             <div class="row">
-              <div class="col">
+              <div class="col footerSection-form-name">
                 <label for="">Nombre</label>
                 <input
                   type="text"
@@ -423,7 +435,7 @@
                   aria-label="Nombres"
                 />
               </div>
-              <div class="col">
+              <div class="col footerSection-form-lastname">
                 <label for="">Apellidos</label>
                 <input
                   type="text"
@@ -434,8 +446,9 @@
               </div>
             </div>
             <div class="row">
-              <div class="col">
-                Telefono de Contacto
+              <div class="col footerSection-form-phone">
+                <label for="">Telefono de Contacto</label>
+
                 <input
                   type="text"
                   class="form-control"
@@ -443,7 +456,7 @@
                   aria-label="Telefono"
                 />
               </div>
-              <div class="col">
+              <div class="col footerSection-form-mail">
                 <label for="">Correo</label>
                 <input
                   type="text"
@@ -454,24 +467,26 @@
               </div>
             </div>
             <div class="row">
-              <div class="col">
+              <div class="col footerSection-form-textarea">
                 <textarea
                   class="form-control"
                   placeholder="Escriba su consulta aca"
                   id="floatingTextarea"
                 ></textarea>
               </div>
-              <div class="">
+              <div class="text-center mt-3">
                 <button class="btn btn-primary" type="submit">
                   Submit form
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg4 col-md-12 col-sm-12 col-xs-12">
+          <div
+            class="col-xl-4 col-lg4 col-md-12 col-sm-12 col-xs-12 footerSection-maps"
+          >
             <div class="row">
-              <h4>Donde encontrarnos</h4>
-              <p>
+              <h5 class="text-center">Donde encontrarnos</h5>
+              <p class="text-center">
                 Nos podes encontrar en
                 <strong>Thames 2120. Palermo, Buenos Aires.</strong>
               </p>
@@ -486,24 +501,26 @@
               ></iframe>
             </div>
           </div>
-          <div class="col-xl-4 col-lg4 col-md-12 col-sm-12 col-xs-12">
+          <div
+            class="col-xl-4 col-lg4 col-md-12 col-sm-12 col-xs-12 footerSection-socialmedia"
+          >
             <div class="row">
-              <h5>Redes Sociales</h5>
-              <p>
+              <h5 class="text-center">Redes Sociales</h5>
+              <p class="text-center">
                 Te dejamos nuestras redes sociales para que nos sigas y estes
                 atento a nuestras promociones!
               </p>
-              <div class="iconos">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
+              <div class="footerSection-iconos text-center">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center footerSection-copyright">
         Copyright <i class="fa-regular fa-copyright"></i> Luis D Torres C 2023.
       </div>
     </footer>

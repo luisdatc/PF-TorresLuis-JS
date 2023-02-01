@@ -1,0 +1,38 @@
+.footerSection {
+  padding: 1.5rem 0 0 0;
+  &-form {
+    padding: 0.5rem 1rem;
+    &-name,
+    &-lastname,
+    &-phone,
+    &-mail,
+    &-textarea {
+      margin: 0.5rem 0;
+    }
+    &-name label,
+    &-lastname label,
+    &-phone label,
+    &-mail label {
+      margin: 0.5rem 0;
+    }
+    &-textarea textarea {
+      resize: none;
+    }
+  }
+  &-maps {
+    padding: 0.5rem 1rem;
+  }
+  &-socialmedia {
+    padding: 0.5rem 1rem;
+    display: flex;
+  }
+  &-iconos i {
+    padding: 1rem;
+    font-size: 3rem;
+    color: $naranja;
+  }
+  &-copyright {
+    background-color: black;
+    color: $amarillo;
+  }
+}
