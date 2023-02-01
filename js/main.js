@@ -1,3 +1,5 @@
+let precioCursos = 0;
+let cart;
 //Capturas del DOM
 
 let containerDestacada = document.getElementById("container");
@@ -13,6 +15,9 @@ let encontrado = document.getElementById("encontrado");
 let btnMenorMayor = document.getElementById("menorMayor");
 let btnMayorMenor = document.getElementById("mayorMenor");
 let btnAlfabetico = document.getElementById("alfabetico");
+
+let modalBody = document.getElementById("modalBody");
+let btnCarrito = document.getElementById("carrito");
 
 //funcion para mostrar cursos en la seccion cursos destacados
 function cursosTop(array) {
@@ -32,7 +37,6 @@ function cursosTop(array) {
     );
     nuevaCard.innerHTML = `
       <div class="card">
-      <!-- <img src="..." class="card-img-top" alt="..." /> -->
       <div class="card-body">
       <h5 class="card-title">${curso.nombreCurso}</h5>
       <p class="card-text"> El curso tiene un Precio de: $${curso.precioCurso} ARS.
@@ -40,7 +44,7 @@ function cursosTop(array) {
       <p class="card-text">
       El curso tiene una fecha estima de inicio de: ${curso.inicioCursada}
       </p>
-      <a href="#" class="btn btn-primary" id="btnAgregar${curso.idCurso}">Agregar al Carrito</a>
+      
       </div>
       </div>`;
     nuevaRow.appendChild(nuevaCard);
@@ -69,16 +73,22 @@ function mostrarProductos(todos) {
     <p class="card-text">
     El curso tiene una fecha estima de inicio de: ${curso.inicioCursada}
     </p>
-    <a href="#" class="btn btn-primary" id="btnAgregar${curso.idCurso}">Agregar al Carrito</a>
+    <button class="btn btn-primary" id="btnAgregar${curso.idCurso}">Agregar al Carrito</button>
     </div>
     </div>`;
     rowCategoria.appendChild(div);
     quitarClaseActive();
+
+    let btnAgregarCarro = document.getElementById(`btnAgregar${curso.idCurso}`);
+
+    btnAgregarCarro.addEventListener("click", () => {
+      agregarAlCarro(curso);
+    });
   });
 }
 
 //funcion para mostrar cursos por categoria
-function mostrarCursosCategoria(cursos) {
+function mostrarCursosCategoria(curso) {
   let div = document.createElement("div");
   div.classList.add(
     "col-xl-3",
@@ -91,16 +101,22 @@ function mostrarCursosCategoria(cursos) {
   div.innerHTML = `
     <div class="card catalogoSection-card">
     <div class="card-body">
-      <h5 class="card-title">${cursos.nombreCurso}</h5>
-      <p class="card-text"> El curso tiene un Precio de: $${cursos.precioCurso} pesos argentinos.
+      <h5 class="card-title">${curso.nombreCurso}</h5>
+      <p class="card-text"> El curso tiene un Precio de: $${curso.precioCurso} pesos argentinos.
     </p>
     <p class="card-text">
-    El curso tiene una fecha estima de inicio: ${cursos.inicioCursada}
+    El curso tiene una fecha estima de inicio: ${curso.inicioCursada}
     </p>
-    <a href="#" class="btn btn-primary" id="btnAgregar${cursos.idCurso}">Agregar al Carrito</a>
+    <button class="btn btn-primary" id="btnAgregar${curso.idCurso}">Agregar al Carrito</button>
     </div>
     </div>`;
   rowCategoria.appendChild(div);
+
+  let btnAgregarCarro = document.getElementById(`btnAgregar${curso.idCurso}`);
+
+  btnAgregarCarro.addEventListener("click", () => {
+    agregarAlCarro(curso);
+  });
 }
 
 //funcion quitar clase active a los botones y agregar solo al boton seleccionado
@@ -137,6 +153,7 @@ function buscarInfo(cursoBuscado, arrayCurso) {
   }
 }
 
+//funciones de ordenamiento:
 function cursoMenorMayor(curso) {
   const menMay = [].concat(curso);
   menMay.sort((curso01, curso02) => curso01.precioCurso - curso02.precioCurso);
@@ -159,6 +176,69 @@ function cursoAlfabeticoNombre(curso) {
     return 0;
   });
   mostrarProductos(cursoAlfabetico);
+}
+
+//funcion agregar al carrito
+function agregarAlCarro(producto) {
+  if (cart.includes(producto)) {
+    alert("El curso ya ha sido agregado al carrito");
+  } else {
+    cart.push(producto);
+    /*     precioCursos += producto.precioCurso;
+     */ localStorage.setItem("carrito", JSON.stringify(cart));
+  }
+}
+
+//cargar el carrito si es que hay algo
+if (localStorage.getItem("carrito")) {
+  cart = JSON.parse(localStorage.getItem("carrito"));
+} else {
+  cart = [];
+  localStorage.setItem("carrito", cart);
+}
+
+function cursosCarrito(array) {
+  let total = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].precioCurso;
+  }
+
+  modalBody.innerHTML = "";
+  array.forEach((curso) => {
+    modalBody.innerHTML += `
+        <div class="card border-primary mb-3">
+                 <div class="card-body">
+                        <h4 class="card-title">${curso.nombreCurso}</h4>
+                    
+                         <p class="card-text">$${curso.precioCurso}</p> 
+                         <button class= "btn btn-danger" id="btnEliminar${curso.idCurso}"><i class="fas fa-trash-alt"></i></button>
+                 </div>    
+            </div>
+        `;
+    let btnEliminar = document.querySelector(`#btnEliminar${curso.idCurso}`);
+    btnEliminar.addEventListener("click", () => {
+      removerCursoCarrito(cart, curso.idCurso);
+      cursosCarrito(cart)
+    });
+  });
+
+  let nuevoDiv = document.createElement("div");
+  nuevoDiv.innerHTML = `
+  <h3> El total del carrito es: ${total}
+  `;
+
+  modalBody.append(nuevoDiv);
+}
+//eliminar curso 
+function removerCursoCarrito(cart, idCurso) {
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].idCurso == idCurso) {
+      cart.splice(i, 1);
+      localStorage.setItem("carrito", JSON.stringify(cart));
+      break;
+    }
+  }
 }
 
 //LLAMADO DE FUNCIONES
@@ -211,6 +291,11 @@ btnMayorMenor.addEventListener("click", () => {
 //evento alfabeticamente
 btnAlfabetico.addEventListener("click", () => {
   cursoAlfabeticoNombre(cursosCatalogo);
+});
+
+//boton carrito
+btnCarrito.addEventListener("click", () => {
+  cursosCarrito(cart);
 });
 
 /* //filtrado de array para boton categoria programacion
