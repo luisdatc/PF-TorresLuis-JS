@@ -1,15 +1,22 @@
-
-
 /* MAIN SECTION */
 .main {
-  &-contenedor {
-    background-color: $amarillo;
+  /* &-contenedor {
     padding: 0 1rem;
     margin-top: 3rem;
-  }
+  } */
   &-img {
     width: 80%;
     margin: 0 auto;
   }
 }
 
+.card {
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  background-color: $color12;
+  border-color: $color13;
+  &-title {
+    color: $color5;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

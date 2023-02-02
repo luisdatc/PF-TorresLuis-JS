@@ -1,21 +1,32 @@
 .UsSection {
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr, 2fr, 1fr;
   grid-template-areas:
-    "item1 item3 item6"
-    "item1 item4 item6"
-    "item2 item5 item7";
-/*   background-color: $fucsia;
- */}
+    "item1 item1 item4"
+    "item6 item5 item5"
+    "item2 item2 item3";
+  /*   background-color: $fucsia;
+ */
+}
 
 .UsSection-item1 {
   grid-area: item1;
+  margin: auto;
+  padding: 2rem;
+  text-align: left;
 }
 .UsSection-item2 {
   grid-area: item2;
+  margin: auto;
+  padding: 2rem;
+  text-align: left;
 }
 .section-item3 {
+  grid-area: item3;
+}
+.UsSection-item3 {
   grid-area: item3;
 }
 .UsSection-item4 {
@@ -23,12 +34,12 @@
 }
 .UsSection-item5 {
   grid-area: item5;
+  margin: auto;
+  padding: 2rem;
+  text-align: right;
 }
 .UsSection-item6 {
   grid-area: item6;
-}
-.UsSection-item7 {
-  grid-area: item7;
 }
 
 @media (max-width: 768px) {

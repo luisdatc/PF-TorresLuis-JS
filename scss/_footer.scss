@@ -1,7 +1,9 @@
 .footerSection {
-  padding: 1.5rem 0 0 0;
+  &-main {
+    padding: 1.5rem;
+  }
   &-form {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     &-name,
     &-lastname,
     &-phone,
@@ -18,13 +20,18 @@
     &-textarea textarea {
       resize: none;
     }
+    & h5 {
+      background-color: $fucsia;
+    }
   }
   &-maps {
     padding: 0.5rem 1rem;
   }
   &-socialmedia {
     padding: 0.5rem 1rem;
-    display: flex;
+    & h5{
+      background-color: $naranja;
+    }
   }
   &-iconos i {
     padding: 1rem;
@@ -34,5 +41,8 @@
   &-copyright {
     background-color: black;
     color: $amarillo;
+  }
+  &-maps h5{
+    background-color: $amarillo;
   }
 }

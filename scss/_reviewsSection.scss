@@ -1,5 +1,5 @@
 .reviewSection {
-  background-color: $naranja;
+  padding: 1rem;
   &-card {
     padding: 1rem 1.5rem;
     &-name {
@@ -7,6 +7,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: start;
+      background-color: $amarillo;
+      border-radius: 10px 10px 0 0 ;
+      padding: 0.5rem;
       & h5 {
         padding: 0 2rem;
       }
@@ -15,9 +18,16 @@
       border-radius: 50%;
     }
     &-review {
-      padding: 1rem 0;
+      background-color: $naranja;
+      color: $color10;
+      padding: 1rem 1.5rem;
+      border-radius: 0 0 10px 10px;
       & blockquote {
         text-align: justify;
+        margin: 0;
+        & i{
+          color: $color7;
+        }
       }
     }
   }
