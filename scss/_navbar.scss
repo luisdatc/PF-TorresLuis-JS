@@ -12,24 +12,27 @@
     padding: 1rem 0;
     border: none;
     margin-right: 2rem;
-    color: $fucsia;
-    &:hover{
+    color: navy;
+    /* &:hover {
       color: $naranja;
-    }
+    } */
   }
 }
 
 .nav-item {
   .nav-link {
-    color: $naranja;
+    color: navy;
     font-weight: 500;
     font-size: 1.2rem;
     &:hover {
-      color: $fucsia;
+      /* color: $fucsia; */
     }
   }
-  &-boton{
+  &-boton {
     margin: auto 0;
   }
 }
 
+.dark .navbar {
+  background-color: lightblue;
+}

@@ -194,7 +194,7 @@ if (localStorage.getItem("carrito")) {
   cart = JSON.parse(localStorage.getItem("carrito"));
 } else {
   cart = [];
-  localStorage.setItem("carrito", cart);
+  localStorage.setItem("carrito", JSON.stringify(cart));
 }
 
 function cursosCarrito(array) {
@@ -210,7 +210,6 @@ function cursosCarrito(array) {
         <div class="card border-primary mb-3">
                  <div class="card-body">
                         <h4 class="card-title">${curso.nombreCurso}</h4>
-                    
                          <p class="card-text">$${curso.precioCurso}</p> 
                          <button class= "btn btn-danger" id="btnEliminar${curso.idCurso}"><i class="fas fa-trash-alt"></i></button>
                  </div>    
@@ -219,7 +218,7 @@ function cursosCarrito(array) {
     let btnEliminar = document.querySelector(`#btnEliminar${curso.idCurso}`);
     btnEliminar.addEventListener("click", () => {
       removerCursoCarrito(cart, curso.idCurso);
-      cursosCarrito(cart)
+      cursosCarrito(cart);
     });
   });
 
@@ -230,7 +229,7 @@ function cursosCarrito(array) {
 
   modalBody.append(nuevoDiv);
 }
-//eliminar curso 
+//eliminar curso
 function removerCursoCarrito(cart, idCurso) {
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].idCurso == idCurso) {

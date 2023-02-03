@@ -3,8 +3,9 @@
   /*   background-color: $naranjaclaro;
  */
   &-category {
-/*     margin: auto;
- */  }
+    /*     margin: auto;
+ */
+  }
   &-category-text {
     text-align: center;
   }
@@ -16,17 +17,18 @@
     &-diseño,
     &-data {
       margin: 0.5rem 0;
-      border: 1px solid $amarillo;
+      border: 1px solid lightblue;
       border-radius: 10px;
       padding: 0.5rem;
-      color: $fucsia;
+      color: lightblue;
+      background-color: navy;
     }
     &-programacion:hover,
     &-diseño:hover,
     &-data:hover {
-      background-color: $fucsia;
-      color: $amarillo;
-      border: 1px solid $amarillo;
+      background-color: lightblue;
+      color: navy;
+      border: 1px solid navy;
     }
   }
   &-column3-input {
@@ -37,17 +39,44 @@
     background-color: transparent;
     margin: 0.5rem 0;
   }
-  &-column3-buttons{
+  &-column3-buttons {
     padding: 0.5rem 0;
+  }
+  &-card {
+    margin: 0.5rem 0;
   }
 }
 
-.catalogoSection-card {
-  margin: 0.5rem;
+#btnMostrarTodo,
+#btnOcultarTodo {
+  color: lightblue;
+  border-color: lightblue;
+}
+
+#btnMostrarTodo:hover,
+#btnOcultarTodo:hover {
+  background-color: lightblue;
+  color: navy;
+  border-color: navy;
+}
+
+#menorMayor,
+#mayorMenor,
+#alfabetico {
+  @extend #btnMostrarTodo;
+}
+#menorMayor:hover,
+#mayorMenor:hover,
+#alfabetico:hover {
+  background-color: lightblue;
+  color: navy;
+  border-color: navy;
 }
 
 .active {
-  background: $azulroyal;
+  background: lightblue;
+  color: navy;
+  border-color: navy;
 }
 
 @media (min-width: 376px) and (max-width: 992px) {
@@ -72,7 +101,6 @@
   #menorMayor,
   #mayorMenor,
   #alfabetico {
-    width: 33.33%;
     border-radius: 5px;
     margin: 1rem;
   }

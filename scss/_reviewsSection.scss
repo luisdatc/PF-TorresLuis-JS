@@ -7,8 +7,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: start;
-      background-color: $amarillo;
-      border-radius: 10px 10px 0 0 ;
+      background-color: navy;
+      color: lightblue;
+      border-radius: 10px 10px 0 0;
       padding: 0.5rem;
       & h5 {
         padding: 0 2rem;
@@ -18,17 +19,32 @@
       border-radius: 50%;
     }
     &-review {
-      background-color: $naranja;
-      color: $color10;
+      background-color: lightblue;
+      color: navy;
       padding: 1rem 1.5rem;
       border-radius: 0 0 10px 10px;
       & blockquote {
         text-align: justify;
         margin: 0;
-        & i{
+        & i {
           color: $color7;
         }
       }
     }
+  }
+}
+
+/* DARK MODE */
+
+.dark .reviewSection-card-name {
+  color: white;
+  background-color: transparent;
+  border: 1px solid rgb(85, 80, 80);
+}
+
+.dark .reviewSection-card-review {
+  background-color: rgb(85, 80, 80);
+  & blockquote {
+    color: black;
   }
 }

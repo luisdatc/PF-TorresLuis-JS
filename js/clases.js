@@ -46,7 +46,7 @@ const cursosCatalogo = [
   },
   {
     idCurso: 6,
-    nombreCurso: "UX/UI Avzd",
+    nombreCurso: "UX/UI Avanzado",
     categoria: "Diseño",
     precioCurso: 9000,
     inicioCursada: "01/06/2023",

@@ -7,39 +7,48 @@
     "item1 item1 item4"
     "item6 item5 item5"
     "item2 item2 item3";
-  /*   background-color: $fucsia;
- */
+  &-title {
+    text-align: center;
+    padding: 1rem;
+    text-decoration: underline;
+  }
+  &-item1 {
+    grid-area: item1;
+    margin: auto;
+    padding: 2rem;
+    text-align: left;
+    background: navy;
+    color: white;
+    font-size: 1.5rem;
+  }
+  &-item2 {
+    grid-area: item2;
+    @extend .UsSection-item1;
+    text-align: left;
+  }
+  &-item3 {
+    grid-area: item3;
+  }
+  &-item4 {
+    grid-area: item4;
+  }
+  &-item5 {
+    background: lightblue;
+    grid-area: item5;
+    @extend .UsSection-item1;
+    text-align: right;
+    color: black;
+  }
+  &-item6 {
+    grid-area: item6;
+  }
 }
 
-.UsSection-item1 {
-  grid-area: item1;
-  margin: auto;
-  padding: 2rem;
-  text-align: left;
-}
-.UsSection-item2 {
-  grid-area: item2;
-  margin: auto;
-  padding: 2rem;
-  text-align: left;
-}
-.section-item3 {
-  grid-area: item3;
-}
-.UsSection-item3 {
-  grid-area: item3;
-}
-.UsSection-item4 {
-  grid-area: item4;
-}
-.UsSection-item5 {
-  grid-area: item5;
-  margin: auto;
-  padding: 2rem;
-  text-align: right;
-}
-.UsSection-item6 {
-  grid-area: item6;
+.dark .UsSection-item1,
+.dark .UsSection-item2,
+.dark .UsSection-item5 {
+  background-color: rgb(85, 80, 80);
+  color: black;
 }
 
 @media (max-width: 768px) {
@@ -49,8 +58,4 @@
     align-items: center;
     justify-content: center;
   }
-
-  /* .UsSection-item4{
-    padding: 0.5rem;
-  } */
 }

@@ -12,11 +12,25 @@
 
 .card {
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  background-color: $color12;
+  background-color: lightblue;
   border-color: $color13;
   &-title {
-    color: $color5;
+    color: navy;
     font-weight: 500;
     text-decoration: underline;
   }
+}
+
+.dark .card {
+  background-color: rgb(85, 80, 80);
+  & .card-title {
+    color: black;
+  }
+  & .card-text {
+    color: black;
+  }
+}
+
+.dark .modal-header {
+  color: navy;
 }

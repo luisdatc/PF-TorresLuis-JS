@@ -21,7 +21,9 @@
       resize: none;
     }
     & h5 {
-      background-color: $fucsia;
+      background-color: navy;
+      color: lightblue;
+      font-weight: 700;
     }
   }
   &-maps {
@@ -29,20 +31,36 @@
   }
   &-socialmedia {
     padding: 0.5rem 1rem;
-    & h5{
-      background-color: $naranja;
+    & h5 {
+      background-color: navy;
+      font-weight: 700;
+      color: lightblue;
     }
   }
   &-iconos i {
     padding: 1rem;
     font-size: 3rem;
-    color: $naranja;
+    color: navy;
   }
   &-copyright {
     background-color: black;
-    color: $amarillo;
+    color: lightblue;
   }
-  &-maps h5{
-    background-color: $amarillo;
+  &-maps h5 {
+    background-color: lightblue;
+    color: navy;
+    font-weight: 700;
   }
 }
+
+.dark .footerSection-socialmedia h5,
+.dark .footerSection-maps h5,
+.dark .footerSection-form h5 {
+  color: black;
+  background-color: rgb(85, 80, 80);
+}
+
+.dark .footerSection-iconos i{
+  color: rgb(85, 80, 80);
+}
+
