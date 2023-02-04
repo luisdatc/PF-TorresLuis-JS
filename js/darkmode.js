@@ -6,9 +6,9 @@ btnSwitch.addEventListener('click', () => {
 
 	// Guardamos el modo en localstorage.
 	if(document.body.classList.contains('dark')){
-		JSON.parse(localStorage.setItem('dark-mode', true));
+		localStorage.setItem('dark-mode', true);
 	} else {
-		JSON.parse(localStorage.setItem('dark-mode', false));
+		localStorage.setItem('dark-mode', false);
 	}
 });
 

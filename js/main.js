@@ -1,5 +1,6 @@
-let precioCursos = 0;
 let cart;
+let total = 0;
+
 //Capturas del DOM
 
 let containerDestacada = document.getElementById("container");
@@ -18,6 +19,8 @@ let btnAlfabetico = document.getElementById("alfabetico");
 
 let modalBody = document.getElementById("modalBody");
 let btnCarrito = document.getElementById("carrito");
+
+let precioTotalCurso = document.getElementById("precioTotalCurso");
 
 //funcion para mostrar cursos en la seccion cursos destacados
 function cursosTop(array) {
@@ -181,11 +184,26 @@ function cursoAlfabeticoNombre(curso) {
 //funcion agregar al carrito
 function agregarAlCarro(producto) {
   if (cart.includes(producto)) {
-    alert("El curso ya ha sido agregado al carrito");
+    Swal.fire({
+      title: "¡Error!",
+      text: `El curso ${producto.nombreCurso} ya se encuentra agregado al carrito`,
+      icon: "error",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   } else {
     cart.push(producto);
-    /*     precioCursos += producto.precioCurso;
-     */ localStorage.setItem("carrito", JSON.stringify(cart));
+    localStorage.setItem("carrito", JSON.stringify(cart));
+    Toastify({
+      text: `El curso ${producto.nombreCurso} fue agregado al carrito satisfactoriamente`,
+      duration: 2000,
+      gravity: "top", 
+      position: "center", 
+      style: {
+        background: "linear-gradient(to right, navy, lighblue)",
+        color: "black"
+      },
+    }).showToast();
   }
 }
 
@@ -197,50 +215,61 @@ if (localStorage.getItem("carrito")) {
   localStorage.setItem("carrito", JSON.stringify(cart));
 }
 
+//funcion para mostrar los cursos en el carrito y eliminarlos del carrito 
 function cursosCarrito(array) {
-  let total = 0;
-
-  for (let i = 0; i < cart.length; i++) {
-    total += cart[i].precioCurso;
-  }
-
   modalBody.innerHTML = "";
-  array.forEach((curso) => {
+  array.forEach((cursoEnCarrito) => {
     modalBody.innerHTML += `
-        <div class="card border-primary mb-3">
+        <div class="card border-primary mb-2" id="cursoEnCarrito${cursoEnCarrito.idCurso}">
                  <div class="card-body">
-                        <h4 class="card-title">${curso.nombreCurso}</h4>
-                         <p class="card-text">$${curso.precioCurso}</p> 
-                         <button class= "btn btn-danger" id="btnEliminar${curso.idCurso}"><i class="fas fa-trash-alt"></i></button>
+                        <h4 class="card-title">${cursoEnCarrito.nombreCurso}</h4>
+                         <p class="card-text">$${cursoEnCarrito.precioCurso}</p> 
+                         <button class= "btn btn-danger" id="btnEliminar${cursoEnCarrito.idCurso}"><i class="fas fa-trash-alt"></i></button>
                  </div>    
             </div>
         `;
-    let btnEliminar = document.querySelector(`#btnEliminar${curso.idCurso}`);
-    btnEliminar.addEventListener("click", () => {
-      removerCursoCarrito(cart, curso.idCurso);
-      cursosCarrito(cart);
-    });
   });
 
-  let nuevoDiv = document.createElement("div");
-  nuevoDiv.innerHTML = `
-  <h3> El total del carrito es: ${total}
-  `;
+  //otro for each para el evento
+  array.forEach((cursoEnCarrito) =>
+    document
+      .getElementById(`btnEliminar${cursoEnCarrito.idCurso}`)
+      .addEventListener("click", () => {
+        let cardCurso = document.getElementById(
+          `cursoEnCarrito${cursoEnCarrito.idCurso}`
+        );
+        cardCurso.remove();
 
-  modalBody.append(nuevoDiv);
-}
-//eliminar curso
-function removerCursoCarrito(cart, idCurso) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].idCurso == idCurso) {
-      cart.splice(i, 1);
-      localStorage.setItem("carrito", JSON.stringify(cart));
-      break;
-    }
-  }
+        let cursoEliminar = array.find(
+          (curso) => curso.id == cursoEnCarrito.id
+        );
+
+        let indice = array.indexOf(cursoEliminar);
+        array.splice(indice, 1);
+
+        localStorage.setItem("carrito", JSON.stringify(array));
+        totalCarrito(array);
+      })
+  );
+  totalCarrito(array);
 }
 
-//LLAMADO DE FUNCIONES
+//Funcion para obtener y actualizar el total del carrito
+function totalCarrito(array) {
+  let total = array.reduce(
+    (acc, cursoEnCarrito) => acc + cursoEnCarrito.precioCurso,
+    0
+  );
+
+  total == 0
+    ? (precioTotalCurso.innerHTML = `El carrito de compras esta vacios, si te intereso algun curso ¡Agregalo!`)
+    : (precioTotalCurso.innerHTML = `El monto total a pagar es: <strong>${total}</strong>`);
+}
+
+//LLAMADO DE FUNCION
+
+//Mostrar todos los productos
+mostrarProductos(cursosCatalogo)
 
 //Mostrar Seccion de cursos Destacados
 cursosTop(cursosDestacados);
@@ -296,28 +325,3 @@ btnAlfabetico.addEventListener("click", () => {
 btnCarrito.addEventListener("click", () => {
   cursosCarrito(cart);
 });
-
-/* //filtrado de array para boton categoria programacion
-btnProgramacion.addEventListener("click", ()=>{
-  // btnProgramacion.classList.remove("Active");
-  rowCategoria.innerHTML = "";
-  btnProgramacion.classList.add("Active");
-  let filtradoCursos = cursosCatalogo.filter((cursosCat)=> cursosCat.categoria === "programacion");
-  filtradoCursos.forEach(mostrarCursosCategoria)
-});
-
-//filtrado de array para boton categoria diseño
-btnDiseño.addEventListener("click", ()=>{
-  btnProgramacion.classList.remove("Active");
-  btnDiseño.classList.add("Active");
-  rowCategoria.innerHTML = "";
-  let filtradoCursos = cursosCatalogo.filter((cursosCat)=> cursosCat.categoria === "diseño");
-  filtradoCursos.forEach(mostrarCursosCategoria)
-});
-//filtrado de array para boton categoria data
-btnData.addEventListener("click", ()=>{
-  btnData.classList.add("Active");
-  rowCategoria.innerHTML = "";
-  let filtradoCursos = cursosCatalogo.filter((cursosCat)=> cursosCat.categoria === "data");
-  filtradoCursos.forEach(mostrarCursosCategoria)
-});  */

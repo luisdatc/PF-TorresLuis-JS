@@ -13,9 +13,6 @@
     border: none;
     margin-right: 2rem;
     color: navy;
-    /* &:hover {
-      color: $naranja;
-    } */
   }
 }
 
@@ -24,9 +21,6 @@
     color: navy;
     font-weight: 500;
     font-size: 1.2rem;
-    &:hover {
-      /* color: $fucsia; */
-    }
   }
   &-boton {
     margin: auto 0;
@@ -35,4 +29,8 @@
 
 .dark .navbar {
   background-color: lightblue;
+}
+
+.fa-bars{
+  color: navy;
 }

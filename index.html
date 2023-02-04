@@ -19,13 +19,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css"
+    />
     <title>Capacitando</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#home"
+          <a class="navbar-brand" href="#"
             ><img
               src="images/favicon.svg"
               alt="logo Capacitando"
@@ -36,87 +41,68 @@
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
             <i class="fa-solid fa-bars"></i>
           </button>
-
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                Capacitando
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body align-items-center">
-              <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#home"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#nosotros">Nosotros</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Cursos
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#destacados">Destacados</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#catalogo">Catalogo</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#reviews">Reviews</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-              </ul>
-              <div class="">
-                <ul class="navbar-nav">
-                  <li class="nav-item nav-item-boton">
-                    <button class="switchDark" id="switch">
-                      <span><i class="fa-solid fa-sun"></i></span>
-                      <span><i class="fa-solid fa-moon"></i></span>
-                    </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Cursos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#destacados">Destacados</a>
                   </li>
-                  <li class="nav-item boton">
-                    <button
-                      type="button"
-                      class="btn navbar-button-cart"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      <i class="fa-solid fa-cart-shopping" id="carrito"
-                        ><span> </span
-                      ></i>
-                    </button>
+                  <li>
+                    <a class="dropdown-item" href="#catalogo">Catalogo</a>
                   </li>
                 </ul>
-              </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#reviews">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+            <div class="">
+              <ul class="navbar-nav">
+                <li class="nav-item nav-item-boton">
+                  <button class="switchDark" id="switch">
+                    <span><i class="fa-solid fa-sun"></i></span>
+                    <span><i class="fa-solid fa-moon"></i></span>
+                  </button>
+                </li>
+                <li class="nav-item boton">
+                  <button
+                    type="button"
+                    class="btn navbar-button-cart"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <i class="fa-solid fa-cart-shopping" id="carrito"
+                      ><span> </span
+                    ></i>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -145,6 +131,10 @@
             ></button>
           </div>
           <div class="modal-body" id="modalBody"></div>
+
+          <div class="row mx-auto">
+            <p id="precioTotalCurso"></p>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -192,10 +182,10 @@
           profesor y ayuda de nuestra comunidad y estudiantes en un foro.
         </div>
         <div class="UsSection-item3">
-          <img src="images/3.jpg" alt="" class="img-fluid" />
+          <img src="images/5.jpg" alt="" class="img-fluid" />
         </div>
         <div class="UsSection-item4">
-          <img src="images/8.jpg" alt="" class="img-fluid" />
+          <img src="images/3.jpg" alt="" class="img-fluid" />
         </div>
         <div class="UsSection-item5">
           En nuestra academia la modalidad es 100% online, para brindarte la
@@ -204,7 +194,7 @@
           cuales son: Diseño, Data y Programacion.
         </div>
         <div class="UsSection-item6">
-          <img src="images/4.jpg" alt="" class="img-fluid" />
+          <img src="images/8.jpg" alt="" class="img-fluid" />
         </div>
       </div>
     </section>
@@ -292,20 +282,20 @@
                 </div>
               </div>
 
-              <h4 class="catalogoSection-column3-tittle">Ordenar</h4>
+              <h4 class="catalogoSection-column3-tittle">Orden:</h4>
               <div
                 class="btn-group-vertical"
                 role="group"
                 aria-label="Vertical button group"
               >
                 <button type="button" class="btn btn-success" id="menorMayor">
-                  Menor a Mayor: Precio
+                  Menor a Mayor Precio
                 </button>
                 <button type="button" class="btn btn-success" id="mayorMenor">
-                  Mayor a Menor: Precio
+                  Mayor a Menor Precio
                 </button>
                 <button type="button" class="btn btn-success" id="alfabetico">
-                  Alfabeticamente
+                  Alfabetico
                 </button>
               </div>
             </div>
@@ -524,14 +514,19 @@
       </div>
     </footer>
 
-    <!--JAVASCRIPT FILES
-    <script
+    <!-- JAVASCRIPT FILES -->
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
-    ></script>
-     <script src="js/bootstrap.js"></script> -->
+    ></script> -->
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- TOASTIFY -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
+    <!-- BOOTSTRAP -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ARCHIVOS JS PROPIOS -->
     <script src="js/clases.js"></script>
     <script src="js/main.js"></script>
     <script src="js/darkmode.js"></script>

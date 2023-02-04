@@ -18,6 +18,7 @@
     color: navy;
     font-weight: 500;
     text-decoration: underline;
+    text-align: center;
   }
 }
 
@@ -33,4 +34,9 @@
 
 .dark .modal-header {
   color: navy;
+}
+
+.dark #precioTotalCurso{
+  color: navy;
+  font-weight: 700;
 }

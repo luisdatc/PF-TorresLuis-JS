@@ -1,8 +1,16 @@
 .cursosSection {
   padding: 1rem;
+  background-color: navy;
+  & h3 {
+    color: lightblue;
+  }
   &-tittle {
     text-align: center;
     padding: 2rem 3rem;
     text-decoration: underline;
   }
+}
+
+.dark .cursosSection {
+  background-color: transparent;
 }

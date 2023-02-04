@@ -1,14 +1,8 @@
 /* CUSTOM NAVBAR */
 $navbar-light-brand-color: navy;
-/* $navbar-light-brand-hover-color: $fucsia; */
 
 /* DROPDOWN NAVBAR */
 $dropdown-link-color: navy;
-/* $dropdown-link-hover-color: lightblue;
- */
- /* $dropdown-border-color: none;
-$dropdown-bg: transparent;
-$dropdown-link-hover-bg: transparent; */
 $dropdown-padding-y: 0;
 $dropdown-item-padding-y: 0.1rem;
 
@@ -17,5 +11,8 @@ $input-btn-focus-color: navy;
 /* button primary */
 $primary: navy;
 $success: navy;
+
+$navbar-light-toggler-border-color:navy;
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";

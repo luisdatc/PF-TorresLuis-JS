@@ -66,13 +66,7 @@ body.dark {
 }
 
 /* CUSTOM NAVBAR */
-/* $navbar-light-brand-hover-color: $fucsia; */
 /* DROPDOWN NAVBAR */
-/* $dropdown-link-hover-color: lightblue;
- */
-/* $dropdown-border-color: none;
-$dropdown-bg: transparent;
-$dropdown-link-hover-bg: transparent; */
 /* button primary */
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
@@ -3918,7 +3912,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+  --bs-navbar-toggler-border-color: navy;
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
@@ -11709,9 +11703,6 @@ textarea.form-control-lg {
   border: none;
   margin-right: 2rem;
   color: navy;
-  /* &:hover {
-    color: $naranja;
-  } */
 }
 
 .nav-item .nav-link {
@@ -11719,15 +11710,16 @@ textarea.form-control-lg {
   font-weight: 500;
   font-size: 1.2rem;
 }
-.nav-item .nav-link:hover {
-  /* color: $fucsia; */
-}
 .nav-item-boton {
   margin: auto 0;
 }
 
 .dark .navbar {
   background-color: lightblue;
+}
+
+.fa-bars {
+  color: navy;
 }
 
 /* MAIN SECTION */
@@ -11751,6 +11743,7 @@ textarea.form-control-lg {
   color: navy;
   font-weight: 500;
   text-decoration: underline;
+  text-align: center;
 }
 
 .dark .card {
@@ -11765,6 +11758,11 @@ textarea.form-control-lg {
 
 .dark .modal-header {
   color: navy;
+}
+
+.dark #precioTotalCurso {
+  color: navy;
+  font-weight: 700;
 }
 
 .UsSection {
@@ -11808,6 +11806,10 @@ textarea.form-control-lg {
   grid-area: item6;
 }
 
+.dark .UsSection-title {
+  color: lightblue;
+}
+
 .dark .UsSection-item1,
 .dark .UsSection-item2,
 .dark .UsSection-item5 {
@@ -11825,11 +11827,19 @@ textarea.form-control-lg {
 }
 .cursosSection {
   padding: 1rem;
+  background-color: navy;
+}
+.cursosSection h3, .cursosSection .h3 {
+  color: lightblue;
 }
 .cursosSection-tittle {
   text-align: center;
   padding: 2rem 3rem;
   text-decoration: underline;
+}
+
+.dark .cursosSection {
+  background-color: transparent;
 }
 
 .catalogoSection {
@@ -11943,10 +11953,10 @@ textarea.form-control-lg {
   }
 }
 .reviewSection {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 .reviewSection-card {
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
 }
 .reviewSection-card-name {
   display: flex;
@@ -12048,7 +12058,7 @@ textarea.form-control-lg {
 }
 
 .dark .footerSection-iconos i {
-  color: rgb(85, 80, 80);
+  color: lightblue;
 }
 
 /*# sourceMappingURL=style.css.map */
