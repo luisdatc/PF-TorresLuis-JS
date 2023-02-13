@@ -109,7 +109,7 @@
       </nav>
     </header>
 
-    <!-- Modal -->
+    <!-- Modal Carrito -->
     <div
       class="modal fade"
       id="exampleModal"
@@ -130,8 +130,19 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body" id="modalBody"></div>
-
+          <div class="modal-body" id="modalB">
+            <table class="table" id="modalTable">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre de Curso</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody id="modalBody"></tbody>
+            </table>
+          </div>
+          <div id="modalbody2"></div>
           <div class="row mx-auto">
             <p id="precioTotalCurso"></p>
           </div>
@@ -143,7 +154,11 @@
             >
               Cerrar
             </button>
-            <button type="button" class="btn btn-primary">
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnConfirmarCompra"
+            >
               Confirmar Compra
             </button>
           </div>
@@ -206,6 +221,18 @@
 
       <div class="cards-wrapper">
         <div class="container-fluid" id="container"></div>
+        <div class="loader1 text-center" id="loader2">
+          <div class="loading loading01">
+            <span>C</span>
+            <span>A</span>
+            <span>R</span>
+            <span>G</span>
+            <span>A</span>
+            <span>N</span>
+            <span>D</span>
+            <span>O</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -243,7 +270,20 @@
           <div
             class="col-lg-8 col-xl-8 col-md-12 col-sm-12 col-xs-12 catalogoSection-cursos order-sm-3 order-md-3 order-lg-2 order-xl-2"
           >
-            <div class="row" id="rowcategoria"></div>
+            <div class="row rowCategoria" id="rowcategoria">
+              <div class="loader1 text-center" id="loader">
+                <div class="loading loading01">
+                  <span>C</span>
+                  <span>A</span>
+                  <span>R</span>
+                  <span>G</span>
+                  <span>A</span>
+                  <span>N</span>
+                  <span>D</span>
+                  <span>O</span>
+                </div>
+              </div>
+            </div>
             <h3 id="encontrado"></h3>
           </div>
           <div
@@ -255,7 +295,7 @@
                   type="text"
                   class="form-control catalogoSection-column3-input"
                   id="searchInput"
-                  placeholder="Nombre de curso/categoria"
+                  placeholder="Nombre de curso"
                   aria-label="Input group example"
                   aria-describedby="btnGroupAddon"
                 />
@@ -465,7 +505,7 @@
               </div>
               <div class="text-center mt-3">
                 <button class="btn btn-primary" type="submit">
-                  Submit form
+                  Enviar Consulta
                 </button>
               </div>
             </div>
@@ -514,16 +554,10 @@
       </div>
     </footer>
 
-    <!-- JAVASCRIPT FILES -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script> -->
-    <!-- SWEET ALERT -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- TOASTIFY -->
     <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- BOOTSTRAP -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- ARCHIVOS JS PROPIOS -->

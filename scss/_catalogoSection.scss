@@ -2,12 +2,12 @@
   padding: 1rem;
   /*   background-color: $naranjaclaro;
  */
-  &-category {
-    /*     margin: auto;
- */
+  &-cursos {
+    margin: auto;
   }
   &-category-text {
     text-align: center;
+    margin-top: 1rem;
   }
   &-category-buttons {
     display: flex;
@@ -33,11 +33,11 @@
   }
   &-column3-input {
     padding-bottom: 0.5rem 0;
+    margin: 1rem 0;
   }
   &-column3-searchinput-btn {
     border: none;
     background-color: transparent;
-    margin: 0.5rem 0;
   }
   &-column3-buttons {
     padding: 0.5rem 0;
@@ -46,6 +46,7 @@
     margin: 0.5rem 0;
   }
 }
+
 
 #btnMostrarTodo,
 #btnOcultarTodo {
