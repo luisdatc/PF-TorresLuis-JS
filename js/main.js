@@ -60,23 +60,15 @@ async function mostrarCursosDestacados(selectedCourses) {
       <div class="card">
         <div class="card-body text-center">
           <h5 class="card-title">${curso.nombreCurso}</h5>
-          <p class=""> El curso tiene un Precio de: <strong>$${curso.precioCurso} ARS</strong>.
+          <p class="card-text"> El curso tiene un Precio de: <strong>$${curso.precioCurso} ARS</strong>.
           </p>
-          <p class="">
+          <p class="card-text">
             El curso tiene una fecha estima de inicio de: ${curso.inicioCurso}
           </p>
-          <div class="">
-            <button class="btn btn-primary" id="btnAgregar${curso.idCurso}">Agregar al Carrito</button>
-          </div>
+
         </div>
       </div>`;
     nuevaRow.appendChild(nuevaCard);
-
-    let btnAgregarCarro = document.getElementById(`btnAgregar${curso.idCurso}`);
-
-    btnAgregarCarro.addEventListener("click", () => {
-      agregarAlCarro(curso);
-    });
   }
 }
 
@@ -85,7 +77,6 @@ function mostrarCatalogo(cursos) {
   rowCategoria.innerHTML = "";
   cursos.forEach((curso) => {
     mostrarCursos(curso);
-    /* quitarClaseActive(); */
   });
 }
 
@@ -310,7 +301,9 @@ setTimeout(() => {
 btnMostrarCursos.addEventListener("click", () => {
   mostrarCatalogo(cursosCatalogo);
   busqueda.value = "";
+  quitarClaseActive();
 });
+
 //funcionabilidad boton ocultar todo
 btnOcultarTodo.addEventListener("click", () => {
   rowCategoria.innerHTML = "";
