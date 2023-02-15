@@ -1,27 +1,50 @@
-# Proyecto Final - Curso JavaScript Comision 48575 CoderHouse
+<img src="images/JS-LOGO.webp" align="right" width="20%" height="20%">
+
+<h1> Proyecto Final - Curso JavaScript Comision 48575 CoderHouse </h1>
 
 En el desarrollo de este proyecto final se aplicaron las siguientes herramientas: 
 
--HTML5
--Bootstrap
--CSS3 
--SASS 
--GitHub, GitHub Pages
+  :heavy_check_mark:HTML5
+  
+  :heavy_check_mark:Bootstrap
+  
+  :heavy_check_mark:CSS3
+  
+  :heavy_check_mark:SASS
+  
+  :heavy_check_mark:GitHub
+  
+  :heavy_check_mark:GitHub Pages
 
--JavaScript 
-  -Declaraciones de variables locales y globales.
-  -Condicionales, bucles.
-  -Objetos y arrays.
-  -Metodos de Arrays.
-  -Manipulacion del DOM.
-  -Operadores Avanzados.
-  -Carga de datos desde una API o Archivo JSON.
-  -Manipulacion del LocalStorage.
-  -Uso de librerias: Se usaron Toastify y SweetAlert.
-  -Creacion de funciones.
-  -Uso de una clase constructora para la creacion de objetos.
-  -Uso de eventos click. 
-  -Uso de funciones asincronicas y promesas con fetch
+<h1>:warning: JavaScript</h1>
+
+:white_check_mark:Declaraciones de variables locales y globales.
+
+:white_check_mark:Condicionales, bucles.
+
+:white_check_mark:Objetos y arrays.
+
+:white_check_mark:Metodos de Arrays.
+
+:white_check_mark:Manipulacion del DOM.
+
+:white_check_mark:Operadores Avanzados.
+
+:white_check_mark:Carga de datos desde una API o Archivo JSON.
+
+:white_check_mark:Manipulacion del LocalStorage.
+
+:white_check_mark:Uso de librerias: Se usaron Toastify y SweetAlert.
+
+:white_check_mark:Creacion de funciones.
+
+:white_check_mark:Uso de una clase constructora para la creacion de objetos.
+
+:white_check_mark:Uso de eventos click. 
+
+:white_check_mark:Uso de funciones asincronicas y promesas con fetch
+
+<h1>Descripcion del Proyecto</h1>
 
 El proyecto consiste en una Ecommerce de venta de cursos donde se podra observar una seccion donde se cargara un array (median un archivo JSON) de 4 articulos aleatorios que cambiaran cada vez que se actualice la pagina. 
 
