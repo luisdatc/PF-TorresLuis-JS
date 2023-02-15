@@ -134,7 +134,7 @@ function quitarClaseActive() {
 }
 
 //funcion buscar por nombre de curso y por categoria
-function buscarInfo(cursoBuscado, arrayCurso) {
+function buscarCurso(cursoBuscado, arrayCurso) {
   let busquedaCurso = arrayCurso.filter(
     (curso) =>
       curso.nombreCurso.toLowerCase().includes(cursoBuscado) ||
@@ -330,7 +330,7 @@ botones.forEach((boton) => {
 
 //evento input de busqueda
 busqueda.addEventListener("input", () => {
-  buscarInfo(busqueda.value.toLowerCase(), cursosCatalogo);
+  buscarCurso(busqueda.value.toLowerCase(), cursosCatalogo);
 });
 
 //evento menor a mayor
