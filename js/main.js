@@ -242,7 +242,7 @@ function cursosCarrito(array) {
     modalBody.innerHTML += `
     <tr id="cursoEnCarrito${cursoEnCarrito.idCurso}">
       <td>${cursoEnCarrito.nombreCurso}</td>
-      <td>${cursoEnCarrito.precioCurso}</td>
+      <td>${cursoEnCarrito.precioCurso} $ARS</td>
       <td>
         <button class="btn btn-danger" id="btnEliminar${cursoEnCarrito.idCurso}">
           <i class="fas fa-trash-alt"></i>
@@ -285,7 +285,7 @@ function totalCarrito(array) {
   total == 0
     ? ((precioTotalCurso.innerHTML = `El carrito de compras esta vacio, si te intereso algun curso ¡Agregalo!`),
       (modalB.style.display = "none"))
-    : ((precioTotalCurso.innerHTML = `El monto total a pagar es: <strong>${total}</strong>`),
+    : ((precioTotalCurso.innerHTML = `El monto total a pagar es: <strong>${total} $ARS</strong>`),
       (modalB.style.display = "inline-flex"));
 }
 
